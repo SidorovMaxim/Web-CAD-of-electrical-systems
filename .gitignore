@@ -2,12 +2,14 @@
 /node_modules
 
 # database
-/dataBase/test
 /dataBase/temp
 /dataBase/old
 
 # server scripts
 /jsServer/old
+
+# public
+/public/old
 
 start.bat
 start.bat.lnk
