@@ -10,5 +10,6 @@
 /jsServer/old
 
 server.bat
+server.bat.lnk
 parser.bat
 downloadInfoFromServer.bat
