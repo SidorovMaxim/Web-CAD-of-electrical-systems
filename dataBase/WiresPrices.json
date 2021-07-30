@@ -1,0 +1,104 @@
+[
+	{
+		"price": 0.38,
+		"name": "ПЭТВ-2 (d=0.1 мм)",
+		"d": 0.0001,
+		"href": "https://www.chipdip.ru/product0/9000272017"
+	},
+	{
+		"price": 1.08,
+		"name": "ПЭТВ-2 (d=0.2 мм)",
+		"d": 0.0002,
+		"href": "https://www.chipdip.ru/product0/9000272018"
+	},
+	{
+		"price": 2,
+		"name": "ПЭТВ-2 (d=0.3 мм)",
+		"d": 0.0003,
+		"href": "https://www.chipdip.ru/product0/9000272019"
+	},
+	{
+		"price": 3.59,
+		"name": "ПЭТВ-2 (d=0.4 мм)",
+		"d": 0.0004,
+		"href": "https://www.chipdip.ru/product0/9000272014"
+	},
+	{
+		"price": 5.3,
+		"name": "ПЭТВ-2 (d=0.5 мм)",
+		"d": 0.0005,
+		"href": "https://www.chipdip.ru/product0/9000272016"
+	},
+	{
+		"price": 7.73,
+		"name": "ПЭТВ-2 (d=0.6 мм)",
+		"d": 0.0006,
+		"href": "https://www.chipdip.ru/product0/9000272020"
+	},
+	{
+		"price": 10.55,
+		"name": "ПЭТВ-2 (d=0.71 мм)",
+		"d": 0.00071,
+		"href": "https://www.chipdip.ru/product0/9000272021"
+	},
+	{
+		"price": 11.63,
+		"name": "ПЭТВ-2 (d=0.8 мм)",
+		"d": 0.0008,
+		"href": "https://www.chipdip.ru/product0/9000272022"
+	},
+	{
+		"price": 14.71,
+		"name": "ПЭТВ-2 (d=0.9 мм)",
+		"d": 0.0009,
+		"href": "https://www.chipdip.ru/product0/9000272023"
+	},
+	{
+		"price": 20.71,
+		"name": "ПЭТВ-2 (d=1 мм)",
+		"d": 0.001,
+		"href": "https://www.chipdip.ru/product0/9000272015"
+	},
+	{
+		"price": 26.36,
+		"name": "ПЭТВ-2 (d=1.12 мм)",
+		"d": 0.00112,
+		"href": "https://www.chipdip.ru/product0/9000285242"
+	},
+	{
+		"price": 32.22,
+		"name": "ПЭТВ-2 (d=1.25 мм)",
+		"d": 0.00125,
+		"href": "https://www.chipdip.ru/product0/9000272024"
+	},
+	{
+		"price": 35.63,
+		"name": "ПЭТВ-2 (d=1.32 мм)",
+		"d": 0.00132,
+		"href": "https://www.chipdip.ru/product0/9000272025"
+	},
+	{
+		"price": 46.4,
+		"name": "ПЭТВ-2 (d=1.5 мм)",
+		"d": 0.0015,
+		"href": "https://www.chipdip.ru/product0/9000272026"
+	},
+	{
+		"price": 51.82,
+		"name": "ПЭТВ-2 (d=1.6 мм)",
+		"d": 0.0016,
+		"href": "https://www.chipdip.ru/product0/9000291368"
+	},
+	{
+		"price": 71.25,
+		"name": "ПЭТВ-2 (d=1.8 мм)",
+		"d": 0.0018,
+		"href": "https://www.chipdip.ru/product0/9000291369"
+	},
+	{
+		"price": 82.86,
+		"name": "ПЭТВ-2 (d=2.0 мм)",
+		"d": 0.002,
+		"href": "https://www.chipdip.ru/product0/9000291370"
+	}
+]

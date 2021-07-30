@@ -1,0 +1,43 @@
+[{
+	"name": "onePhaseFullWave2d(halfBridge)",
+	"phaseDevice": 3,
+	"diodesNum": 2,
+	"transformerLeadsNum": 3,
+	"numDiodesVoltageDropInit": 1,
+	"devicePulsation": 2
+}, {
+	"name": "onePhaseFullWave4d(bridge)",
+	"phaseDevice": 1,
+	"diodesNum": 4,
+	"transformerLeadsNum": 2,
+	"numDiodesVoltageDropInit": 2,
+	"devicePulsation": 2
+}, {
+	"name": "onePhaseHalfWave1d(oneDiode)",
+	"phaseDevice": 1,
+	"diodesNum": 1,
+	"transformerLeadsNum": 2,
+	"numDiodesVoltageDropInit": 1,
+	"devicePulsation": 1
+}, {
+	"name": "threePhaseBridge6d(bridge)",
+	"phaseDevice": 3,
+	"diodesNum": 6,
+	"transformerLeadsNum": 3,
+	"numDiodesVoltageDropInit": 2,
+	"devicePulsation": 6
+}, {
+	"name": "threePhaseDoubleBridge12d(doubleBridge)",
+	"phaseDevice": 3,
+	"diodesNum": 12,
+	"transformerLeadsNum": 6,
+	"numDiodesVoltageDropInit": 4,
+	"devicePulsation": 12
+}, {
+	"name": "threePhaseHalfWave3d(withZeroPoint)",
+	"phaseDevice": 3,
+	"diodesNum": 3,
+	"transformerLeadsNum": 4,
+	"numDiodesVoltageDropInit": 1,
+	"devicePulsation": 3
+}];
