@@ -9,7 +9,7 @@
 # server scripts
 /jsServer/old
 
-server.bat
-server.bat.lnk
-parser.bat
-downloadInfoFromServer.bat
+start.bat
+start.bat.lnk
+parse.bat
+update-database.bat

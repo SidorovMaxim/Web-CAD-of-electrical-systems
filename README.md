@@ -5,10 +5,10 @@ Computer-aided design of electrical systems
 HTML, CSS, JavaScript, jQuery, Node.js, Express.js, Request.js
 
 ## Launch application:
-node server.js
+npm start
 
 ## Download new electrical components:
-node downloadInfoFromServer.js
+npm update-database
 
 ## Parse new electrical components to the database:
-node parser.js
+npm parse
