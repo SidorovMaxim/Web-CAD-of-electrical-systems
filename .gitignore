@@ -1,0 +1,14 @@
+# dependencies
+/node_modules
+
+# database
+/dataBase/test
+/dataBase/temp
+/dataBase/old
+
+# server scripts
+/jsServer/old
+
+server.bat
+parser.bat
+downloadInfoFromServer.bat
