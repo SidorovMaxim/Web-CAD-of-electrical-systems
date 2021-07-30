@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang='ru'>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Экспертная система выбора оборудования электротехнических комплексов</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	<style type='text/css'>
+
+		body {
+			background: url(wellspring-search-bg.jpg);
+			background-size: cover;
+			background-position: left;
+		}
+		.bodyFixed {
+			background-attachment: fixed;
+		}
+
+		.title1 {
+			font-size: 30px;
+			background-image: url("title2.jpg");
+			background-position: center;
+			background-size: 100%;
+			vertical-align: middle;
+			color: white;
+			text-shadow: 1px 1px 1px black;
+		}
+		.title2 {
+			font-size: 18px;
+			background: rgba(255, 255, 255, 0.3);
+			color: black;
+		}
+		.title3 {
+			font-size: 18px;
+			vertical-align: middle;
+			color: black;
+		}
+		.title4 {
+			font-size: 18px;
+			background-image: url("title2.jpg");
+			background-position: center;
+			background-size: 100%;
+			vertical-align: middle;
+			color: white;
+			text-shadow: 1px 1px 1px black;
+		}		
+		.title5 {
+			font-size: 16px;
+			vertical-align: middle; 
+			white-space: pre;
+		}
+		.title6 {
+			font-size: 36px;
+			margin-top: 350px;
+			color: black;		
+		}
+
+		.numIndex {
+			font-size: 11px;
+		}
+
+		.smallButton {
+			background: white;
+			border-radius: 14px;
+			font-size: 22px;
+			height: 40px;
+			width: 40px;
+			margin: 2px;
+			border: 5px groove darkred;
+		}
+		.smallButton:hover {
+			border: 5px groove darkgreen;
+		}
+		.smallButtonActive {
+			background: white;
+			border-radius: 14px;
+			font-size: 22px;
+			height: 40px;
+			width: 40px;
+			margin: 2px;
+			border: 5px groove limegreen;
+		}
+
+		.schemeButton {
+			width: 280px;
+			height: 140px;
+			border-radius: 15px;
+			margin: 5px;
+			background-color: white;
+			border: 8px groove darkred;
+		}
+		.schemeButton:hover {
+			border: 8px groove darkgreen;
+		}
+		.schemeButtonActive {
+			width: 280px;
+			height: 140px;
+			border-radius: 15px;
+			margin: 5px;
+			background-color: white;
+			border: 8px groove limegreen;
+		}     
+
+		.schemeImg {     
+			width: 250px;
+			border-radius: 15px;
+		}
+
+		.table {
+			-webkit-backdrop-filter: blur(4px);
+  			backdrop-filter: blur(4px);
+			width: 1250px;
+			margin-bottom: 30px;
+			box-shadow: 3px 3px 10px grey;
+			border: outset 2px;        
+			border-spacing: 2px;
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+		.tableDevices {
+			-webkit-backdrop-filter: blur(4px);
+  			backdrop-filter: blur(4px);
+			width: 1250px;
+			box-shadow: 3px 3px 10px grey;
+			border: outset 2px;        
+			border-spacing: 2px;
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+		td {
+			border: 1px solid black;
+		}
+		.perp {
+			font-size: 32px;
+			color: rgb(34, 75, 122);
+			white-space: pre;
+		 }
+		.tableHidden {
+			display: none;
+		}
+
+		.finalTr {
+			background-color: black;
+			height: 1px;
+		}
+
+		.param1 {
+			vertical-align: middle;
+			border-radius: 6px;
+			border: 2px solid black;
+			text-align: center;
+			height: 26px;
+			margin: -1px;
+			font-size: 23px;
+			font-weight: 900;
+			resize: none;
+		}
+
+		.submitButton {			
+			background-image: url("title2.jpg");
+			background-position: center;
+			background-size: 200%;
+			text-align: center;
+			color: white;
+			height: 92px;
+			width: 1240px;
+			font-size: 40px;
+			border-radius: 0px 0px 33px 33px;
+			border: 2px black;
+			text-shadow: 1px 1px 5px black;
+			margin: -3px;
+		}
+		.submitButton:hover {
+			animation: textSubmit 1.5s infinite linear;
+		}
+		.submitButton:active {
+			height: 85px;
+			width: 1236px;
+			border-radius: 0px 0px 36px 36px;
+		}
+		.submitTable {
+			border-radius: 0px 0px 40px 40px;
+			margin-bottom: 40px;
+			box-shadow: 3px 3px 10px grey;
+			border: outset 2px;
+			width: 1250px;
+			height: 100px;
+			border-spacing: 1px;
+		}
+		.submitTable:active {
+			border: 2px outset black;
+			width: 1243px;
+			height: 92px;
+			box-shadow: 0px 0px 0px;
+			margin-top: 3px;
+			margin-bottom: 48px;
+		}
+		.tdSubmit {
+			border-radius: 0px 0px 34px 34px;
+			border: 2px solid white;
+		}
+		.tdSubmit:active {
+			border-radius: 0px 0px 37px 37px;
+			border: 2px solid white;
+		}
+
+		@keyframes textSubmit {
+			from { color: white; }
+			50%  { color: dimgray; }
+			to   { color: white; }
+		}
+
+		input[type=range] {
+			-webkit-appearance: none;
+			margin-top: 20px;
+			width: 650px;
+		}
+
+		input[type=range]::-moz-range-track {
+			background-color: rgb(74, 118, 168);
+			border: 3px solid rgb(34, 75, 122);
+			width: 650px;
+			height: 20px;
+			border-radius: 10px;
+		}
+
+		input[type=range]::-moz-range-thumb {
+			background-color: white;
+			border: 3px solid rgb(34, 75, 122);
+			width: 40px;
+			height: 40px;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+
+		.formButton {
+			width: 60px;
+			height: 45px;
+			border-radius: 4px;
+			margin: 1px;
+			background-color: white;
+			border: 3px groove darkred;
+		}
+		.formButton:hover {
+			border: 4px groove darkgreen;
+			border-radius: 8px;
+			width: 120px;
+			height: 80px;
+			margin: -29px;
+			position: relative ;
+			z-index: 1;
+		}
+		.formButtonActive {
+			width: 60px;
+			height: 45px;
+			border-radius: 4px;
+			margin: 1px;
+			background-color: white;
+			border: 3px groove limegreen;
+		}     
+
+		.formImage {     
+			width: 54px;
+			height: 45px;
+			border-radius: 2px;
+			margin: -2px -8px;
+		}
+		.formImage:hover {     
+			width: 115px;
+			height: 100px;
+			border-radius: 2px;
+			margin: -34px;
+		}
+		.formImageActive {     
+			width: 54px;
+			height: 45px;
+			border-radius: 5px;
+			margin: -2px -8px;
+		}
+
+		.finalSchemeImage {     
+			width: 160px;
+			border-radius: 6px;
+		}
+		.finalSchemeImage:hover {     
+			width: 390px;
+			border-radius: 8px;
+			margin: -120px;
+			position: absolute;		
+			z-index: 2;
+		}
+
+		.annotation {
+			-moz-hyphens: auto;
+			-webkit-hyphens: auto;
+			-ms-hyphens: auto;
+		}
+
+		select {
+			margin-bottom: 2px;
+			vertical-align: center;
+			background-color: rgba(255, 255, 255, 0.5);
+			border-radius: 8px;
+		}
+	}
+
+	</style>
+</head>
+
+<body>
+	<table id='schemeSelection' align='center' cellpadding='5' class='table'>
+		<tr>
+			<td colspan='4' align='center' class='title1'> Выберите необходимую схему </td>
+		</tr>
+
+		<tr align='center'> 
+
+		</tr>
+
+		<tr align='center'> 
+			<td><button class='schemeButton' id='schemeButton1' onclick='schemeSelect(1)'><img class='schemeImg' src='images/Functional2R.jpg'></button></td>
+		</tr>
+	</table>
+
+	<table id='parametersTable'></table>
+
+	<table id='parametersTable2' align='center' cellpadding='5' class='table'>
+		<tr align='center'>
+			<td class='title1' colspan='6'>Задайте параметрические запасы элементов</td>
+		</tr>
+
+		<tr align='right'>
+			<td width='600px' class='title2'> Запас максимального обратного напряжения диодов: + <textarea id="prrVoltageDiodesReserve" maxlength='3' required rows='1' cols='4' class='param1'>10</textarea><pp class='title3'> % <pp></td>
+			<td width='600px' class='title2'> Запас максимального непрерывного тока диодов: + <textarea id="forwardCurrentDiodesReserve" maxlength='3' required rows='1' cols='4' class='param1'>10</textarea><pp class='title3'> % <pp></td>
+		</tr>
+
+		<tr align='right'>
+			<td width='600px' class='title2'> Запас номинального напряжения конденсаторов: + <textarea id="voltageCapsReserve" maxlength='3' required rows='1' cols='4' class='param1'>10</textarea><pp class='title3'> % <pp></td>
+			<td width='600px' class='title2'> Запас рабочей температуры трансформатора: + <textarea id="powerTransformersReserve" maxlength='3' required rows='1' cols='4' class='param1'>10</textarea><pp class='title3'> % <pp></td>
+		</tr>
+		<tr align='center'>
+
+		</tr>
+	</table>
+
+	<table id='parametersTable3' align='center' cellpadding='5' class='table'>
+		<tr align='center'>
+			<td class='title1' colspan='6'>Укажите максимальное количество компонентов</td>
+		</tr>
+
+		<tr align='right'>
+			<td width='600px' class='title2' title='Введите максимально возможное количество диодов, размещаемых параллельно для увеличения рабочего тока выпрямителя'> Диодов параллельно: <textarea id="numDiodesParallel" maxlength='2' required rows='1' cols='3' class='param1'>3</textarea><pp class='title3'> шт. <pp></td>
+			<td width='600px' class='title2' title='Введите максимально возможное количество диодов, размещаемых последовательно для увеличения рабочего обратного напряжения выпрямителя'> Диодов последовательно: <textarea id="numDiodesSerial" maxlength='2' required rows='1' cols='3' class='param1'>3</textarea><pp class='title3'> шт. <pp></td>
+		</tr>
+
+		<tr align='right'>
+			<td width='600px' class='title2' title='Введите максимально возможное количество конденсаторов, размещаемых параллельно для уменьшения пульсаций напряжения на нагрузке'> Конденсаторов параллельно: <textarea id="numCapsParallel" maxlength='2' required rows='1' cols='3' class='param1'>6</textarea><pp class='title3'> шт. <pp></td>
+			<td width='600px' class='title2' title='Введите максимально возможное количество конденсаторов, размещаемых последовательно для увеличения рабочего напряжения фильтра'> Конденсаторов последовательно: <textarea id="numCapsSerial" maxlength='2' required rows='1' cols='3' class='param1'>3</textarea><pp class='title3'> шт. <pp></td>
+		</tr>
+		<tr align='center'>
+
+		</tr>
+	</table>
+
+	<table id='parametersTable4' align='center' cellpadding='5' class='table'>
+		<tr align='center'>
+			<td class='title1' colspan='6'>Введите требуемые параметры</td>
+		</tr>
+
+		<tr align='center'>
+			<td width='400px' class='title2'> Время работы устройства в год </td>
+			<td width='400px' class='title2'> Планируемый срок эксплуатации устройства </td>
+			<td width='400px' class='title2'> Стоимость 1 кВт/час </td>
+			<td width='400px' class='title2'> Температура окружающей среды </td>
+		</tr>
+
+		<tr align='center'>
+			<td><textarea id="hoursPerYear" maxlength='4' required rows='1' cols='6' class='param1'>2000</textarea><pp class='title3'> ч <pp></td>
+			<td><textarea id="workingYears" maxlength='4' required rows='1' cols='5' class='param1'>2</textarea><pp class='title3'> года/лет <pp></td>
+			<td><textarea id="electricityCost" maxlength='4' required rows='1' cols='5' class='param1'>5</textarea><pp class='title3'> руб. <pp></td>
+			<td><textarea id="ambientTemperature" maxlength='2' required rows='1' cols='5' class='param1'>25</textarea><pp class='title3'> &deg;C <pp></td>
+		</tr>
+	</table>
+
+	<table id='submitTable' align='center' class='submitTable'>
+		<tr align='center'>
+			<td class='tdSubmit'>
+				<button class='submitButton' onclick='runCalculation()'> Запустить расчёт по заданным параметрам </button>
+			</td>
+		</tr>
+	</table>
+	
+	<script type='text/javascript' src="jquery-3.3.1.min.js"></script>
+	<script type='text/javascript' src="javaScript.js"></script>
+</body>
+</html>
+
+
+<!--
+
+
+
+
+onchange="document.getElementById('rangeValue').innerHTML = this.value;"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
